@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Shirt Mockup Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>T-Shirt Mockup Generator</h1>
+    <div class="mockup-grid">
+      <div class="tshirt" id="tshirt1" onclick="selectTshirt('canvas1')">
+        <img src="tshirt1.jpg" alt="T-Shirt 1">
+        <canvas class="design-canvas" id="canvas1"></canvas>
+      </div>
+      <div class="tshirt" id="tshirt2" onclick="selectTshirt('canvas2')">
+        <img src="tshirt2.jpg" alt="T-Shirt 2">
+        <canvas class="design-canvas" id="canvas2"></canvas>
+      </div>
+      <div class="tshirt" id="tshirt3" onclick="selectTshirt('canvas3')">
+        <img src="tshirt3.jpg" alt="T-Shirt 3">
+        <canvas class="design-canvas" id="canvas3"></canvas>
+      </div>
+      <div class="tshirt" id="tshirt4" onclick="selectTshirt('canvas4')">
+        <img src="tshirt4.jpg" alt="T-Shirt 4">
+        <canvas class="design-canvas" id="canvas4"></canvas>
+      </div>
+    </div>
+    <div class="controls">
+      <input type="file" id="uploadDesign" accept="image/*">
+      <div class="resize-controls">
+        <label for="resizeWidth">Width:</label>
+        <input type="range" id="resizeWidth" min="50" max="400" value="100">
+        <label for="resizeHeight">Height:</label>
+        <input type="range" id="resizeHeight" min="50" max="300" value="100">
+      </div>
+      <button id="downloadMockup">Download Mockup</button>
+    </div>
+    <div class="position-controls">
+      <button id="moveLeft">Left</button>
+      <button id="moveRight">Right</button>
+      <button id="moveUp">Up</button>
+      <button id="moveDown">Down</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
